@@ -65,6 +65,12 @@ p {
 	font-size: 3rem;
 	margin-bottom: 10px;
 }
+
+img {
+	display: block; /*tira o espaço em branco em baixo da imagem*/
+	max-width: 100%;/*imagem responsiva*/
+}
+
 /**********************************/
 /* 2. Menu
 /**********************************/
@@ -79,7 +85,7 @@ p {
 	justify-content: space-between;
 	max-width: 960px;
 	margin: 0 auto;
-	flex-wrap: wrap	;
+	flex-wrap: wrap	;/*quebra a linha*/
 }
 
 .menu__logo {
@@ -88,7 +94,7 @@ margin: 10px;
 
 .nav__list {
 	display: flex; /*coloca os itens em linha*/
-	flex-wrap: wrap;
+	flex-wrap: wrap;/*quebra a linha*/
 }
 
 
@@ -109,11 +115,49 @@ margin: 10px;
 /**********************************/
 /* 4. Quem somos
 /**********************************/
+.somos {
+	max-width: 960px;
+	margin: 0 auto;
+}
 
+.somos-c {
+	display: flex; /*coloca os itens em linha*/
+	flex-wrap: wrap;/*quebra a linha*/
+	align-items: center;
+	
+}
+
+.somos-c__texto {
+	flex : 6 1 160px;
+}
+
+.somos-c__img {
+	flex : 6 1 160px;
+}
 /**********************************/
 /* 5. Nossos cursos
 /**********************************/
+.cursos {
+	max-width: 960px;
+	max-width: 960px;
+	margin: 0 auto;
+}
 
+.cursos-c {
+	display: flex; /*coloca os itens em linha*/
+	flex-wrap: wrap;/*quebra a linha*/
+	justify-content: center;
+}
+
+.curso {
+	width: 280px;
+	margin: 0 20px;
+}
+
+.curso__titulo {
+	font-size: 1.5rem;
+	text-align: center;
+}
 /**********************************/
 /* 6. Planos
 /**********************************/
