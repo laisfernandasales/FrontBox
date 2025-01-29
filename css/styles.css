@@ -161,7 +161,87 @@ margin: 10px;
 /**********************************/
 /* 6. Planos
 /**********************************/
+.planos {
+	background-color: var(--clr-pink-light);
+}
 
+.planos-c {
+	max-width: 960px;/*largura máxima*/
+	margin: 0 auto;/*centraliza o conteúdo*/
+	display: flex; /*coloca os itens em linha*/
+	flex-wrap: wrap;/*quebra a linha*/
+	justify-content: center;
+
+}
+
+.plano {
+	width: 290px;
+	margin: 10px;
+	border:  2px solid var(--clr-green-light);
+}
+
+.plano__titulo {
+	font-size: 3rem;/*tamanho da fonte*/
+	font-weight: bold;/*negrito*/
+	text-align: center;/*centraliza o texto*/
+	margin: 10px 0;/*margem em cima e em baixo*/
+}
+
+.plano__preco {
+	font-size: 2rem;
+	display: block;/*tira o espaço em branco em baixo da imagem*/
+	text-align: center;
+	font-weight: bold;
+}
+
+.plano__preco sup {
+	position: relative;/*posição relativa*/
+	font-size: 1.5rem;
+	top : -20px;
+}
+
+.plano__divisor {
+	background-color: var(--clr-green-light);
+	width: 20px;
+	margin: 5px auto;
+}
+
+.plano__lista {
+	max-width: 195px;/*largura máxima*/
+	margin: 0 auto;/*centraliza o conteúdo*/
+}
+
+.plano-lista__item {
+	margin: 10px 0;
+	font-style: italic;
+	display: flex;
+}
+
+.plano-lista__item::before {
+	content: "";/*conteúdo vazio*/
+	display: block;/*tira o espaço em branco em baixo da imagem*/
+	width: 5px;
+	height: 5px;
+	background-color: var(--clr-green-light);
+	border-radius: 5px;/*borda arredondada*/
+	margin-right: 5px;/*margem a direita*/
+}
+
+.plano__btn-comprar {
+	display: block;/*tira o espaço em branco em baixo da imagem*/
+	max-width: 180px;/*largura máxima*/
+	font-size: 2rem;/*tamanho da fonte*/
+	font-weight: bold;/*negrito*/
+	margin: 15px auto;/*margem em cima e em baixo*/
+	padding: 10px;/*preenchimento*/
+	text-align: center;/*centraliza o texto*/
+	text-transform: uppercase;/*transforma o texto em maiúsculo*/
+	border: 2px solid var(--clr-green-light);
+}
+
+.plano:last-child {/*último filho*/
+	background-color: var(--clr-green-light);/*cor de fundo*/
+	}
 /**********************************/
 /* 7. Vantagens
 /**********************************/
