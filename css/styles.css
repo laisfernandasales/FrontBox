@@ -171,7 +171,7 @@ margin: 10px;
 	display: flex; /*coloca os itens em linha*/
 	flex-wrap: wrap;/*quebra a linha*/
 	justify-content: center;
-
+	align-items: flex-end; /*alinha os itens filhos na parte de baixo*/
 }
 
 .plano {
@@ -238,14 +238,73 @@ margin: 10px;
 	text-transform: uppercase;/*transforma o texto em maiúsculo*/
 	border: 2px solid var(--clr-green-light);
 }
-
-.plano:last-child {/*último filho*/
-	background-color: var(--clr-green-light);/*cor de fundo*/
+.plano:last-child{
+	background-color: var(--clr-green-light);
+}
+.plano:last-child,.plano:last-child .plano__btn-comprar {/*último plano*/
+	border: 2px solid var(--clr-pink-dark);/*borda*/
 	}
+
+.plano-lista__item::before  , .plano:last-child .plano__divisor{
+  background-color: var(--clr-pink-dark);
+}
+
+@media (max-width: 800px){ /*quando a tela for menor que 800px , o elemento Ultra é mostrado primeiro e premium em segundo*/
+	.plano:nth-child(3){/*terceiro plano*/
+		order: -2;/*ordem*/
+	}
+	.plano:nth-child(2){/*segundo plano*/
+		order: -1;/*ordem*/
+	}
+}
+ /*
+	
 /**********************************/
 /* 7. Vantagens
 /**********************************/
+.vantagens {
+	max-width: 960px;/*largura máxima*/
+	margin: 0 auto;/*centraliza o conteúdo*/
+	display: flex; /*coloca os itens (blocos) em linha*/
+	flex-wrap: wrap;/*quebra a linha*/
+	justify-content: space-between;/*espaço entre os itens*/
+}
 
+.vantagem {
+	max-width: 240px;/*largura máxima*/
+}
+
+.vantagem__titulo {
+	font-size: 1.7rem;/*tamanho da fonte*/
+	margin-bottom: 5px;/*margem em baixo*/
+	margin-left: 10px;
+}
+
+.vantagem__titulo::before {
+	content: "";	/*conteúdo vazio*/
+	display: inline-block; /*coloca o conteúdo em linha*/
+	width: 10px;
+	height: 25px;
+	margin-right: 5px;
+}
+
+.vantagem:nth-of-type(3n+1) .vantagem__titulo::before {/*aplica a cor na primeira e quarta div da section , 3n+1 (seleciona elementos 1,4,7 em diante)*/
+	background-color: var(--clr-green-light);
+
+}
+.vantagem:nth-of-type(3n+2) .vantagem__titulo::before {/*aplica a cor na primeira e qarta div da section*/
+	background-color: var(--clr-pink-dark);
+
+}
+.vantagem:nth-of-type(3n+3) .vantagem__titulo::before {/*aplica a cor na primeira e qarta div da section*/
+	background-color: var(--clr-green-dark);
+
+}
+@media (max-width: 800px){ /*quando a tela for menor que 800px , o elemento Ultra é mostrado primeiro e premium em segundo*/
+	.vantagem{
+		max-width:220px;
+	}
+}
 /**********************************/
 /* 8. Newsletter
 /**********************************/
