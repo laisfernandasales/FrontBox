@@ -271,7 +271,7 @@ margin: 10px;
 }
 
 .vantagem {
-	max-width: 240px;/*largura máxima*/
+	max-width: 280px;/*largura máxima*/
 }
 
 .vantagem__titulo {
@@ -308,6 +308,62 @@ margin: 10px;
 /**********************************/
 /* 8. Newsletter
 /**********************************/
+.newsletter {
+	background-color: var(--clr-green-light);
+}
+
+.newsletter-c {
+	max-width: 960px;/*largura máxima*/
+	margin: 0 auto;/*centraliza o conteúdo*/
+	padding: 50px 0;/*preenchimento*/
+	display: flex; /*coloca os itens em linha*/
+	flex-wrap: wrap-reverse;/*quebra a linha*/
+}
+
+.newsletter-info {
+	flex:  1 1 260px;/*flex-grow , flex-shrink , flex-basis*/
+}
+
+.newsletter-infotitulo{
+	margin-right: 100px;
+}
+.newsletter-info__titulo {
+	font-size: 1.62rem;
+	font-weight: bold;
+}
+
+.newsletter-info__descricao {
+	font-style: italic;
+}
+
+.newsletter-form {
+	flex: 2 1 260px;/*flex-grow , flex-shrink , flex-basis*/
+	display: flex; /*coloca os itens em linha*/
+}
+
+.newsletter-form__input {
+	font-size: 1.25rem;
+	width: 325px;
+	color: black;
+	font-style: italic;
+	font-family: var(--ff-primary);
+	border: 10px solid var(--clr-pink-dark);
+	padding: 10px;
+	margin: 0;
+	border-radius: 0px;
+}
+.newsletter-form__submit {
+	width: 192px; /*largura botão assinar*/
+	font-family: var(--ff-primary);
+	font-size: 2.25rem;/*tamanho da fonte*/
+	font-weight: bold;/*negrito*/
+	text-transform: uppercase;/*transforma o texto em maiúsculo*/
+	background-color: var(--clr-pink-dark);
+	color: black;
+	cursor: pointer;/*cursor*/
+	border: none;/*borda*/
+	padding: 15px;/*preenchimento*/;
+}
 
 /**********************************/
 /* 9. Footer
