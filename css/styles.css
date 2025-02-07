@@ -369,3 +369,10 @@ margin: 10px;
 /* 9. Footer
 /**********************************/
 
+.footer {
+	background-color: var(--clr-pink-light);
+	display: flex;	/*coloca os itens em linha*/
+	flex-wrap: wrap;/*quebra a linha*/
+	justify-content: space-between;/*espaço entre os itens*/
+	padding: 55px calc((100% - 960px)/2);/*preenchimento*/
+}
